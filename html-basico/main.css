@@ -1,0 +1,55 @@
+        :root {
+            color-scheme: light;
+            --fondo: #f4f7fb;
+            --superficie: #ffffff;
+            --texto: #1f2937;
+            --primario: #2563eb;
+            --borde: #dbe3ef;
+            --acento: #e0ecff;
+        }
+
+        body.oscuro {
+            color-scheme: dark;
+            --fondo: #111827;
+            --superficie: #1f2937;
+            --texto: #e5e7eb;
+            --primario: #93c5fd;
+            --borde: #374151;
+            --acento: #243b5e;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            background: var(--fondo);
+            color: var(--texto);
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header, main, footer { max-width: 1050px; margin: auto; padding: 1.5rem; }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        nav ul { display: flex; flex-wrap: wrap; gap: 1rem; list-style: none; padding: 0; }
+        nav a, a { color: var(--primario); }
+        section, article, aside, form, table, figure, details {
+            background: var(--superficie);
+            border: 1px solid var(--borde);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .rejilla { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; }
+        .boton, button { cursor: pointer; border: 0; border-radius: 6px; padding: .65rem 1rem; background: var(--primario); color: white; }
+        input, select, textarea { width: 100%; margin: .35rem 0 1rem; padding: .6rem; border: 1px solid var(--borde); border-radius: 5px; background: var(--superficie); color: var(--texto); }
+        label { font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid var(--borde); padding: .6rem; text-align: left; }
+        th { background: var(--acento); }
+        img, video, iframe { max-width: 100%; border-radius: 6px; }
+        blockquote { border-left: 4px solid var(--primario); margin: 1rem 0; padding-left: 1rem; }
+        .mensaje { min-height: 1.5rem; font-weight: bold; }
+        @media (max-width: 700px) { .rejilla { grid-template-columns: 1fr; } header { display: block; } }

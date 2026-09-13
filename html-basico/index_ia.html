@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ejemplo de las etiquetas HTML más utilizadas">
+    <meta name="author" content="Práctica HTML">
+    <title>Guía de etiquetas HTML</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div>
+            <p><small>Documento HTML5</small></p>
+            <h1>Etiquetas HTML</h1>
+            <p>Una página de ejemplo con estructura, contenido, formulario y multimedia.</p>
+        </div>
+        <button id="tema" type="button" aria-label="Cambiar tema">Modo oscuro</button>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <ul>
+            <li><a href="#contenido">Contenido</a></li>
+            <li><a href="#tabla">Tabla</a></li>
+            <li><a href="#formulario">Formulario</a></li>
+            <li><a href="#multimedia">Multimedia</a></li>
+        </ul>
+    </nav>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <hr/>
+
+    <main id="contenido" name="contenido" class="contenido">
+        <section>
+            <h2>Texto y semántica</h2>
+            <p>HTML permite escribir <strong>texto importante</strong>, <em>texto enfatizado</em>,
+                <mark>texto resaltado</mark>, <del>texto eliminado</del> y <ins>texto insertado</ins>.</p>
+            <p>También se pueden mostrar fórmulas como H<sub>2</sub>O, potencias como 2<sup>3</sup>,
+                código <code>console.log("Hola");</code> y atajos como <kbd>Ctrl</kbd> + <kbd>S</kbd>.</p>
+            <blockquote cite="https://developer.mozilla.org/es/docs/Web/HTML">
+                HTML describe la estructura de una página web.
+            </blockquote>
+            <pre><code>&lt;h1&gt;Hola, HTML&lt;/h1&gt;</code></pre>
+            <hr>
+            <p>Publicado el <time datetime="2026-09-13">13 de septiembre de 2026</time>.</p>
+        </section>
+
+        <div class="rejilla">
+            <article>
+                <h2>Listas</h2>
+                <h3>Lista no ordenada</h3>
+                <ul>
+                    <li>Encabezados</li>
+                    <li>Párrafos</li>
+                    <li>Enlaces</li>
+                </ul>
+                <h3>Lista ordenada</h3>
+                <ol>
+                    <li>Planificar</li>
+                    <li>Escribir</li>
+                    <li>Validar</li>
+                </ol>
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>Lenguaje de marcado para la web.</dd>
+                </dl>
+            </article>
+            <aside>
+                <h2>Información adicional</h2>
+                <p>Este <abbr title="HyperText Markup Language">HTML</abbr> usa etiquetas semánticas.</p>
+                <details>
+                    <summary>¿Qué es una etiqueta?</summary>
+                    <p>Es una instrucción que define la estructura o el significado del contenido.</p>
+                </details>
+            </aside>
+        </div>
+
+        <section id="tabla">
+            <h2>Tabla de ejemplo</h2>
+            <table>
+                <caption>Elementos básicos de una página</caption>
+                <thead>
+                    <tr>
+                        <th>Elemento</th>
+                        <th>Uso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>&lt;header&gt;</code></td>
+                        <td>Encabezado</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;main&gt;</code></td>
+                        <td>Contenido principal</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr><td colspan="2">La tabla incluye caption, thead, tbody y tfoot.</td></tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="formulario">
+            <h2>Formulario interactivo</h2>
+            <form id="contacto">
+                <fieldset>
+                    <legend>Datos de contacto</legend>
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+                    <label for="correo">Correo electrónico</label>
+                    <input id="correo" name="correo" type="email" placeholder="nombre@ejemplo.com" required>
+                    <label for="categoria">Tema</label>
+                    <select id="categoria" name="categoria">
+                        <option>HTML</option>
+                        <option>CSS</option>
+                        <option>JavaScript</option>
+                    </select>
+                    <label for="comentario">Comentario</label>
+                    <textarea id="comentario" name="comentario" rows="4" placeholder="Escribe un mensaje"></textarea>
+                    <label><input type="checkbox" required> Acepto los términos</label>
+                    <button type="submit">Enviar formulario</button>
+                </fieldset>
+            </form>
+            <p id="resultado" class="mensaje" role="status"></p>
+        </section>
+
+        <section id="multimedia">
+            <h2>Multimedia y gráficos</h2>
+            <figure>
+                <svg width="260" height="90" viewBox="0 0 260 90" role="img" aria-label="Gráfico decorativo">
+                    <rect width="260" height="90" rx="8" fill="#2563eb"></rect>
+                    <circle cx="45" cy="45" r="25" fill="#93c5fd"></circle>
+                    <text x="85" y="53" fill="white" font-size="20">SVG integrado</text>
+                </svg>
+                <figcaption>Un gráfico SVG sin recursos externos.</figcaption>
+            </figure>
+            <picture><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='160'%3E%3Crect width='600' height='160' fill='%23e0ecff'/%3E%3Ctext x='25' y='90' font-size='32' fill='%232563eb'%3EImagen de ejemplo%3C/text%3E%3C/svg%3E" alt="Imagen de ejemplo integrada"></picture>
+            <audio controls><source src="" type="audio/mpeg">Tu navegador no soporta audio.</audio>
+            <video controls width="320"><track kind="captions" srclang="es" label="Español">Tu navegador no soporta video.</video>
+        </section>
+    </main>
+
+    <footer>
+        <address>Contacto: <a href="mailto:ejemplo@correo.com">ejemplo@correo.com</a></address>
+        <p><small>&copy; <span id="anio"></span> Práctica de HTML.</small></p>
+    </footer>
+
+    <script src="main.js" defer></script>
+</body>
+</html>
