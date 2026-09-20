@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid y Flexbox | Ejemplo</title>
+    <link rel="stylesheet" href="main-new.css">
+</head>
+<body>
+    <main class="page-shell">
+        <header class="hero">
+            <p class="eyebrow">SESIÓN 2 · CÓDIGO Y MINI-DEMO</p>
+            <h1>Grid y Flexbox</h1>
+            <p class="hero-text">Un ejemplo visual para entender cómo organizar elementos con CSS.</p>
+        </header>
+
+        <section class="code-overview" aria-label="Ejemplos de código">
+            <article class="code-card">
+                <div class="window-bar">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                    <span class="file-name">flexbox.css</span>
+                </div>
+                <pre><code>.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}</code></pre>
+            </article>
+
+            <article class="code-card">
+                <div class="window-bar">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                    <span class="file-name">grid.css</span>
+                </div>
+                <pre><code>.layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 16px;
+}</code></pre>
+            </article>
+        </section>
+
+        <section class="demo-section">
+            <div class="section-heading">
+                <span class="section-number">01</span>
+                <div>
+                    <h2>Flexbox en acción</h2>
+                    <p>Distribución horizontal de elementos.</p>
+                </div>
+            </div>
+
+            <nav class="flex-navbar" aria-label="Navegación de ejemplo">
+                <a class="brand" href="#">Explora<span>.</span></a>
+                <div class="flex-links">
+                    <a href="#destinos">Destinos</a>
+                    <a href="#consejos">Consejos</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <a class="nav-button" href="#destinos">Empezar</a>
+            </nav>
+
+            <div class="flex-gallery">
+                <article class="travel-card">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80" alt="Playa tropical">
+                    <div class="travel-card-content">
+                        <span>ESCAPADA</span>
+                        <h3>Islas del Caribe</h3>
+                        <p>Una pausa frente al mar.</p>
+                    </div>
+                </article>
+                <article class="travel-card">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80" alt="Montaña rocosa">
+                    <div class="travel-card-content">
+                        <span>AVENTURA</span>
+                        <h3>Rutas de montaña</h3>
+                        <p>Respira, camina y descubre.</p>
+                    </div>
+                </article>
+                <article class="travel-card">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=700&q=80" alt="Calle de París">
+                    <div class="travel-card-content">
+                        <span>CULTURA</span>
+                        <h3>Ciudades con historia</h3>
+                        <p>Historias en cada esquina.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="demo-section" id="destinos">
+            <div class="section-heading">
+                <span class="section-number">02</span>
+                <div>
+                    <h2>Grid en acción</h2>
+                    <p>Organización de contenido en columnas y áreas.</p>
+                </div>
+            </div>
+
+            <div class="grid-layout">
+                <aside class="grid-sidebar">
+                    <p class="sidebar-label">Categorías</p>
+                    <a class="active" href="#todos">Todos los destinos</a>
+                    <a href="#playa">Playa</a>
+                    <a href="#montana">Montaña</a>
+                    <a href="#ciudad">Ciudad</a>
+                </aside>
+                <div class="grid-content">
+                    <article class="featured-place">
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Lago entre montañas">
+                        <div class="featured-copy">
+                            <span>DESTINO DESTACADO</span>
+                            <h3>La naturaleza te está llamando</h3>
+                            <p>Encuentra nuevos lugares y convierte cada viaje en una historia.</p>
+                            <a href="#descubrir">Descubrir destino →</a>
+                        </div>
+                    </article>
+                    <div class="stats-row">
+                        <div><strong>24</strong><span>Destinos</span></div>
+                        <div><strong>8</strong><span>Experiencias</span></div>
+                        <div><strong>100%</strong><span>Aventura</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contacto">
+            <p>Ejemplo creado con <strong>display: flex</strong> y <strong>display: grid</strong>.</p>
+        </footer>
+    </main>
+</body>
+</html>
