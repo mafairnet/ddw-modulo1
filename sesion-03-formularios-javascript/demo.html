@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head> 
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario de contacto</title>
+        <link rel="stylesheet" href="assets/js/bundle/css/demo.css">
+    </head>
+    <body>
+        <main class="page-shell">
+            <header class="page-header">
+                <span class="eyebrow">Formulario de prueba</span>
+                <h1>¡Hablemos!</h1>
+                <p>Completa tus datos y cuéntanos un poco sobre ti.</p>
+            </header>
+
+            <section class="form-card" aria-label="Formulario de contacto">
+                <form id="demoForm" action="demo.php" method="POST">
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label id="nombreLabel" for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name">
+                        </div>
+
+                        <div class="form-field">
+                            <label id="correoLabel" for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" placeholder="tu@correo.com" autocomplete="email">
+                        </div>
+
+                        <div class="form-field form-field-full">
+                            <label id="paisLabel" for="pais">País</label>
+                            <select id="pais" name="pais">
+                                <option value="">Selecciona tu país</option>
+                                <option value="mx">México</option>
+                                <option value="us">Estados Unidos</option>
+                            </select>
+                        </div>
+
+                        <fieldset class="choice-field form-field-full" id="fav_language">
+                            <legend id="fav_languageLabel">¿Cuál es tu lenguaje de programación favorito?</legend>
+                            <div class="choice-options">
+                                <label class="choice-option" for="html">
+                                    <input type="radio" id="html" name="fav_language" value="HTML">
+                                    <span>HTML</span>
+                                </label>
+                                <label class="choice-option" for="css">
+                                    <input type="radio" id="css" name="fav_language" value="CSS">
+                                    <span>CSS</span>
+                                </label>
+                                <label class="choice-option" for="javascript">
+                                    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                                    <span>JavaScript</span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-field form-field-full">
+                            <label for="test1">Campos de prueba <span class="optional">(opcionales)</span></label>
+                            <div class="form-grid test-fields">
+                                <input type="text" id="test1" name="prueba[]" placeholder="Campo 1">
+                                <input type="text" id="test2" name="prueba[]" placeholder="Campo 2">
+                                <input type="text" id="test3" name="prueba[]" placeholder="Campo 3">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="submit-button" type="submit">Enviar formulario <span aria-hidden="true">→</span></button>
+                </form>
+
+                <div id="responsePanel" class="response-panel" role="status" aria-live="polite" aria-hidden="true">
+                    <div class="response-heading">
+                        <span id="responseIcon" class="response-icon" aria-hidden="true"></span>
+                        <h2 id="responseTitle"></h2>
+                    </div>
+                    <p id="responseMessage"></p>
+                    <details class="response-details">
+                        <summary>Ver respuesta JSON</summary>
+                        <pre id="responseJson"></pre>
+                    </details>
+                </div>
+            </section>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="assets/js/bundle/demo.js"></script>
+    </body>
+</html>
